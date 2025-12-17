@@ -171,3 +171,37 @@ nav a.active {
   text-decoration: none;
   font-weight: 500;
 }
+
+/* LOGO ROW */
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  max-height: 128px;
+  opacity: 0.75;
+  /* filter: grayscale(100%); */
+  transition: opacity 0.2s ease, filter 0.2s ease;
+  border-radius: 18px;
+}
+
+.logo-row img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo-row {
+    justify-content: center;
+  }
+
+  .logo-row img {
+    margin: 12px 24px;
+  }
+}
